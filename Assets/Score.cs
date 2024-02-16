@@ -4,13 +4,12 @@ using UnityEngine;
 using TMPro;
 using System.Linq.Expressions;
 using Unity.VisualScripting.Antlr3.Runtime;
+using Palmmedia.ReportGenerator.Core.Common;
 
 public class Score : MonoBehaviour
 {
     [SerializeField]
     TMP_Text hiScore;
-    [SerializeField]
-    TMP_Text currTime;
     [SerializeField]
     TMP_Text currScore;
     int score = 0;
@@ -19,8 +18,8 @@ public class Score : MonoBehaviour
     int moles = 0;
 
     float timeMultiplier = 0;
+    bool running = false;
 
-    float tempTimer = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,17 +29,19 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeMultiplier += Time.deltaTime*0.3f;
-        //Debug.Log(timeMultiplier);
-
-        tempTimer += Time.deltaTime;
-        
+        if (running)
+        {
+            timeMultiplier += Time.deltaTime * 0.3f;
+        }
     }
     public void UpdateScore()
     {
-        moles++;
-        currMoles.text = moles.ToString("D4");
-        currScore.text = CalcScore().ToString("D9");
+        if (running)
+        {
+            moles++;
+            currMoles.text = moles.ToString("D4");
+            currScore.text = CalcScore().ToString("D9");
+        }
     }
 
     int CalcScore()
@@ -74,5 +75,21 @@ public class Score : MonoBehaviour
             default:
                 return score += 12 + ((int)timeMultiplier);
         }
+    }
+
+    public void EndScore()
+    {
+        running = false;
+        timeMultiplier = 0;
+
+        if (int.Parse(hiScore.text) < int.Parse(currScore.text))
+            hiScore.text = currScore.text;
+
+    }
+    public void StartScore()
+    {
+        currScore.text = 0.ToString("D9");
+        currMoles.text = 0.ToString("D4");
+        running = true;
     }
 }
