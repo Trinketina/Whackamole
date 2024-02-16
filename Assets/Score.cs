@@ -78,6 +78,8 @@ public class Score : MonoBehaviour
     {
         running = false;
         timeMultiplier = 0;
+        score = 0;
+        moles = 0;
 
         if (int.Parse(hiScore.text) < int.Parse(currScore.text))
             hiScore.text = currScore.text;
@@ -88,5 +90,6 @@ public class Score : MonoBehaviour
         currScore.text = 0.ToString("D9");
         currMoles.text = 0.ToString("D4");
         running = true;
+
     }
 }
