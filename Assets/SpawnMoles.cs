@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System.Threading;
 
 public class SpawnMoles : MonoBehaviour
 {
@@ -16,7 +15,7 @@ public class SpawnMoles : MonoBehaviour
     bool running = false;
 
     [SerializeField]
-    GameObject startMenu;
+    GameObject startButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -83,7 +82,7 @@ public class SpawnMoles : MonoBehaviour
         running = false;
         timerText.text = "TIME    " + 0.ToString("D4");
 
-        startMenu.SetActive(true);
+        startButton.SetActive(true);
     }
 
     public void StartGame()

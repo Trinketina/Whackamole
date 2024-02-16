@@ -2,9 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System.Linq.Expressions;
-using Unity.VisualScripting.Antlr3.Runtime;
-using Palmmedia.ReportGenerator.Core.Common;
 
 public class Score : MonoBehaviour
 {

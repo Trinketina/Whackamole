@@ -240,7 +240,7 @@ MonoBehaviour:
   molePrefab: {fileID: 474538687641705720, guid: 68ebb97dcea3f964daed1fea63561026, type: 3}
   timerText: {fileID: 2075716848}
   startTime: 360
-  startMenu: {fileID: 1692753507}
+  startButton: {fileID: 1692753507}
 --- !u!1 &212545829
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,9 +360,9 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 256, y: 192}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 1
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -902,7 +902,7 @@ Camera:
   far clip plane: 1000
   field of view: 40
   orthographic: 1
-  orthographic size: 0.8
+  orthographic size: 1
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1072,7 +1072,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1375336235
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1089,8 +1089,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -140, y: -70}
-  m_SizeDelta: {x: 36, y: 24}
+  m_AnchoredPosition: {x: -800, y: -400}
+  m_SizeDelta: {x: 216, y: 144}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1375336236
 MonoBehaviour:
@@ -1355,8 +1355,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: 75}
-  m_SizeDelta: {x: 24, y: 24}
+  m_AnchoredPosition: {x: 840, y: 420}
+  m_SizeDelta: {x: 144, y: 144}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1460199684
 MonoBehaviour:
@@ -1487,8 +1487,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -140, y: -25}
-  m_SizeDelta: {x: 36, y: 24}
+  m_AnchoredPosition: {x: -800, y: -150}
+  m_SizeDelta: {x: 216, y: 144}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1692753509
 MonoBehaviour:
@@ -1745,7 +1745,8 @@ MonoBehaviour:
   time: 0
   score: {fileID: 1365677371}
   spawnMoles: {fileID: 86294052}
-  startMenu: {fileID: 1692753507}
+  startButton: {fileID: 1692753507}
+  resetButton: {fileID: 1375336234}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Animations;
 
 public class ArcadeMachine : MonoBehaviour
 {
@@ -22,7 +21,10 @@ public class ArcadeMachine : MonoBehaviour
     SpawnMoles spawnMoles;
 
     [SerializeField]
-    GameObject startMenu;
+    GameObject startButton;
+
+    [SerializeField]
+    GameObject resetButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -65,7 +67,8 @@ public class ArcadeMachine : MonoBehaviour
         time = 0;
         started = false;
         reset = true;
-        startMenu.gameObject.SetActive(true);
+        startButton.SetActive(true);
+        resetButton.SetActive(false);
         spawnMoles.EndGame();
     }
 
@@ -74,7 +77,8 @@ public class ArcadeMachine : MonoBehaviour
         started = true;
         spawnMoles.StartGame();
         score.StartScore();
-        startMenu.SetActive(false);
+        startButton.SetActive(false);
+        resetButton.SetActive(true);
     }
 
     public void ExitGame()
