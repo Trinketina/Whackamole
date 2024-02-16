@@ -70,7 +70,7 @@ public class SpawnMoles : MonoBehaviour
             rectTransform.anchoredPosition = new Vector2(Random.Range(-15f, 15f), Random.Range(-15f, 15f));
             Debug.Log(rectTransform.anchoredPosition);
 
-            Destroy(g, range+range*.5f);
+            Destroy(g, Random.Range(range + range * .5f, range * 3.3f));
 
             elapsed = 0;
         }

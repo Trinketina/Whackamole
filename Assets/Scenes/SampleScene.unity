@@ -239,7 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   molePrefab: {fileID: 474538687641705720, guid: 68ebb97dcea3f964daed1fea63561026, type: 3}
   timerText: {fileID: 2075716848}
-  startTime: 360
+  startTime: 300
   startButton: {fileID: 1692753507}
 --- !u!1 &212545829
 GameObject:

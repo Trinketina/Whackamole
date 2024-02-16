@@ -31,46 +31,46 @@ public class Score : MonoBehaviour
             timeMultiplier += Time.deltaTime * 0.3f;
         }
     }
-    public void UpdateScore()
+    public void UpdateScore(int multiplier)
     {
         if (running)
         {
             moles++;
             currMoles.text = moles.ToString("D4");
-            currScore.text = CalcScore().ToString("D9");
+            currScore.text = CalcScore(multiplier).ToString("D9");
         }
     }
 
-    int CalcScore()
+    int CalcScore(int multiplier)
     {
         switch (moles)
         {
             case <5:
-                score+= 1 + ((int)timeMultiplier);
+                score+= 1 * multiplier + ((int)timeMultiplier);
                 return score;
             case <10:
-                score += 2 + ((int)timeMultiplier);
+                score += 2 * multiplier + ((int)timeMultiplier);
                 return score;
             case <20:
-                score += 3 + ((int)timeMultiplier);
+                score += 3 * multiplier + ((int)timeMultiplier);
                 return score;
             case <35:
-                score += 4 + ((int)timeMultiplier);
+                score += 4 * multiplier + ((int)timeMultiplier);
                 return score;
             case <50:
-                score += 5 + ((int)timeMultiplier);
+                score += 5 * multiplier + ((int)timeMultiplier);
                 return score;
             case <75:
-                score += 7 + ((int)timeMultiplier);
+                score += 7 * multiplier + ((int)timeMultiplier);
                 return score;
             case <100:
-                score += 10 + ((int)timeMultiplier);
+                score += 10 * multiplier + ((int)timeMultiplier);
                 return score;
             case >100:
-                score += 11 + ((int)timeMultiplier);
+                score += 11 * multiplier + ((int)timeMultiplier);
                 return score;
             default:
-                return score += 12 + ((int)timeMultiplier);
+                return score += 12 * multiplier + ((int)timeMultiplier);
         }
     }
 

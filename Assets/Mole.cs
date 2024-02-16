@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Mole : MonoBehaviour
 {
+    [SerializeField]
+    int scoreMultiplier = 1;
+
     Score scoreScript;
     // Start is called before the first frame update
     void Start()
@@ -19,7 +22,7 @@ public class Mole : MonoBehaviour
 
     public void OnHit()
     {
-        scoreScript.UpdateScore();
+        scoreScript.UpdateScore(scoreMultiplier);
         Destroy(this.gameObject);
     }
 
