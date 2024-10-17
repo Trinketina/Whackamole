@@ -50,8 +50,8 @@ public class ArcadeMachine : MonoBehaviour
         }
         else
         {
-            time += Time.deltaTime * 2;
             transform.rotation = Quaternion.Lerp(rotated, Quaternion.Euler(0, 90, -35), time);
+            time += Time.deltaTime * 2;
         }
     }
 
